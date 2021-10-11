@@ -5,7 +5,8 @@ public class llprog{
         LinkedList test;
         for(int num : ints){
             if(test == null){
-                test = new LinkedList(new Node(int[num]))
+                test = new LinkedList();
+                test.initialize(ints[num]);
             } else {
                 test.add(num);
             }
@@ -19,8 +20,8 @@ public class llprog{
 private class LinkedList{
     Node first;
     
-    public LinkedList(Node _first){
-        first = _first;
+    void initialize(int value){
+        first = new node(value);
     }
     
     void append(int value){
